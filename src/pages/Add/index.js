@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addCar } from '../../store/cars';
-import { toggleMessage } from '../../store/layout';
+import { addCar } from '../../store/ducks/cars';
+import { toggleMessage } from '../../store/ducks/layout';
 
 export default function Add() {
 

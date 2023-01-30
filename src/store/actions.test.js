@@ -1,4 +1,4 @@
-import { toggleMessage } from './layout/index';
+import { toggleMessage } from './ducks/layout/index';
 
 describe('Layout Actions', () => {
   describe('Actions Types', () => {

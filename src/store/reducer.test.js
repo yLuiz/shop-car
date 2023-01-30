@@ -1,4 +1,4 @@
-import messageReducer, { toggleMessage } from './layout/index';
+import messageReducer, { toggleMessage } from './ducks/layout/index';
 
 describe('Layout Reducer', () => {
   describe('State of toggle message', () => {
