@@ -1,4 +1,4 @@
-import messageReducer, { Types } from './layout/index';
+import messageReducer, { toggleMessage } from './layout/index';
 
 describe('Layout Reducer', () => {
   describe('State of toggle message', () => {
@@ -10,13 +10,13 @@ describe('Layout Reducer', () => {
     });
 
     test('should turn false to true', () => {
-      const stateOfToggleMessage = messageReducer({ showMessage: false }, { type: Types.TOGGLE_MESSAGE });
+      const stateOfToggleMessage = messageReducer({ showMessage: false }, { type: toggleMessage.type });
 
       expect(stateOfToggleMessage).toEqual({ showMessage: true });
     });
 
     test('should turn true to false', () => {
-      const stateOfToggleMessage = messageReducer({ showMessage: true}, { type: Types.TOGGLE_MESSAGE });
+      const stateOfToggleMessage = messageReducer({ showMessage: true}, { type: toggleMessage.type });
 
       expect(stateOfToggleMessage).toEqual({ showMessage: false });
     });

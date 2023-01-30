@@ -1,4 +1,6 @@
-const ADD_CAR = 'ADD_CAR';
+import { createAction, createReducer } from "@reduxjs/toolkit";
+
+// const ADD_CAR = 'ADD_CAR';
 
 const INITIAL_STATE = [
   {
@@ -18,23 +20,33 @@ const INITIAL_STATE = [
   }
 ];
 
-export default function reducer(state = INITIAL_STATE, action) {
+export const addCar = createAction('ADD_CAR');
 
-  if (action.type === ADD_CAR) {
-    return [
-      ...state,
-      action.payload
-    ]
-  }
 
-  return state;
-};
+export default createReducer(INITIAL_STATE, {
+  [addCar.type]: (state, action) => ([
+    ...state,
+    action.payload
+  ])
+});
+
+// export default function reducer(state = INITIAL_STATE, action) {
+
+//   if (action.type === ADD_CAR) {
+//     return [
+//       ...state,
+//       action.payload
+//     ]
+//   }
+
+//   return state;
+// };
 
 /* ACTION */
 
-export const addCar = payload => {
-  return {
-    type: ADD_CAR,
-    payload,
-  }
-}
+// export const addCar = payload => {
+//   return {
+//     type: ADD_CAR,
+//     payload,
+//   }
+// }

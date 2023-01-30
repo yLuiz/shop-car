@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import Message from '../../components/Message';
 import { addCar } from '../../store/cars';
-import { Creators as CreatorsLayout } from '../../store/layout';
+import { toggleMessage } from '../../store/layout';
 
 export default function Add() {
 
@@ -10,8 +9,6 @@ export default function Add() {
 		{ name: '', url: '' }
 	);
 	const dispatch = useDispatch();
-
-	const { toggleMessage } = CreatorsLayout;
 
 	function formChange(event) {
 		setForm({...form, [event.target.name]: event.target.value});
